@@ -55,6 +55,7 @@ function deleteItem(e) {
 // Function to clear the list and remove all the items from the list
 function clearItems() {
   grocery_items.innerHTML = "";
+  localStorage.clear();
 }
 
 // Function to save the items to the localstorage
