@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  font-family: "Poppins";
+}
+
+body {
+  background: #f5f5f5;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  gap: 2rem;
+}
+
+.add_grocery_items {
+  background: #fff;
+  padding: 3rem;
+  border-radius: 0.25em;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+  transition: all 500ms ease;
+  display: flex;
+}
+
+.add_grocery_items:hover,
+.grocery_items:hover {
+  border-radius: 0.25em;
+  filter: drop-shadow(0px 0px 3px black);
+}
+
+label,
+input {
+  font-size: 1.25rem;
+}
+
+input {
+  padding: 0.2rem 0.5rem;
+}
+
+.btn,
+.btnDelete {
+  font-size: 1.05rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+.grocery_items {
+  background: white;
+  padding: 1rem;
+  min-width: 30rem;
+  min-height: 20vh;
+  margin: 2rem 0;
+  text-align: center;
+  position: relative;
+  transition: all 500ms ease;
+}
+
+#clear {
+  margin: 1rem 0;
+}
+
+.btnDelete {
+  background: red;
+  color: white;
+  padding: 0.5rem 0.95rem;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1.5rem 0;
+  border: 1px solid black;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25em;
+}
+
+.removeItem {
+  opacity: 0;
+  transform: translateY(5rem);
+  transition: all 500ms ease;
+}
