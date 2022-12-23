@@ -44,6 +44,8 @@ input {
 
 input {
   padding: 0.2rem 0.5rem;
+  border: none;
+  border-bottom: 1px solid black;
 }
 
 .btn,
@@ -55,10 +57,15 @@ input {
   cursor: pointer;
 }
 
+#submit {
+  background: skyblue;
+  color: white;
+}
+
 .grocery_items {
   background: white;
   padding: 1rem;
-  min-width: 30rem;
+  width: 30rem;
   min-height: 20vh;
   margin: 2rem 0;
   text-align: center;
@@ -68,6 +75,8 @@ input {
 
 #clear {
   margin: 1rem 0;
+  background: red;
+  color: white;
 }
 
 .btnDelete {
@@ -90,4 +99,29 @@ input {
   opacity: 0;
   transform: translateY(5rem);
   transition: all 500ms ease;
+}
+
+/* Responsiveness */
+
+@media (max-width: 600px) {
+  .add_grocery_items {
+    padding: 1.5rem;
+  }
+  
+  .grocery_items {
+    max-width: 25rem;
+  }
+
+  .item {
+  overflow-x: scroll;
+  }
+
+  .btnDelete {
+    padding: .25rem .75rem;
+  }
+}
+@media (max-width: 450px) {
+  .grocery_items {
+    max-width: 20rem;
+  }
 }

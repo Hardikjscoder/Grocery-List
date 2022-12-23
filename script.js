@@ -3,6 +3,7 @@ const input = document.getElementById("item_input");
 const submit = document.getElementById("submit");
 const clear = document.getElementById("clear");
 const grocery_items = document.querySelector(".grocery_items");
+const itemsElem = document.querySelector(".items");
 
 // ! Event Listeners
 submit.addEventListener("click", addItem);
@@ -30,11 +31,11 @@ function addItem() {
   // delete button
   const deleteIcon = document.createElement("button");
   deleteIcon.classList.add("btnDelete");
-  deleteIcon.innerHTML = "Delete";
+  deleteIcon.innerHTML = `Delete`;
   item.appendChild(deleteIcon);
 
   // Append the item to the grocery items list
-  grocery_items.appendChild(item);
+  itemsElem.appendChild(item);
   input.value = "";
 }
 
@@ -54,7 +55,7 @@ function deleteItem(e) {
 
 // Function to clear the list and remove all the items from the list
 function clearItems() {
-  grocery_items.innerHTML = "";
+  itemsElem.innerHTML = "";
   localStorage.clear();
 }
 
@@ -97,7 +98,7 @@ function updateDOM() {
     item.appendChild(deleteIcon);
 
     // Append the item to the grocery items list
-    grocery_items.appendChild(item);
+    itemsElem.appendChild(item);
   });
 }
 
